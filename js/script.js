@@ -36,3 +36,6 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const cardContainer = document.querySelector(".row");
+// console.log(cardContainer);

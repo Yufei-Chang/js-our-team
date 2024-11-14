@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    color: white;
+    background-color: black;
+    text-align: left;
+    width: calc(100% / 3 - 10px);
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardImg {
+    width: 40%;
+}
+
+.cardtext {
+    padding: 10px;
+}
