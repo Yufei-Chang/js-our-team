@@ -37,5 +37,33 @@ const teamMembers = [
   }
 ];
 
+// Inizio con inizializzare il contenitore generale per le carte
 const cardContainer = document.querySelector(".row");
 // console.log(cardContainer);
+
+// Seguo leggendo l'array dell'oggetto con cui andrò a lavorare
+for (let i = 0; i < teamMembers.length; i++) {
+  // salvo l'oggetto corrente in una variabile
+  const curObject = teamMembers[i];
+  // console.log(curObject);
+  // prendo le proprietà dell'oggetto così come sono e le associo alla nuova variabile
+  const { name, role, email, img } = curObject;
+  // console.log(name);
+
+  // creo una variabile in cui inserisco come valore in stringa il codice HTML con i relativi valori all'interno 
+  const cardElem1 = `
+          <div class="card">
+            <div class="cardImg"><img src="./${img}" alt="" /></div>
+            <div class="cardText">
+              <span class="spanNome">${name}</span>
+              <p class="spanRole">${role}</p>
+              <a href="">${email}</a>
+            </div>
+          </div>
+  `;
+  // console.log(cardElem1);
+
+// aggiungo una card ad ogni iterazione all'html di row
+  cardContainer.innerHTML += cardElem1;
+}
+
